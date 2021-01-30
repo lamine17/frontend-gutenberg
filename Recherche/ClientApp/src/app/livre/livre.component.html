@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+  <a [routerLink]="['/']">Acceuil</a>
+  <table>
+    <thead>
+      Titre: {{titre}}
+    </thead>
+    <tbody>
+      <tr>Auteur : {{nom}} {{prenom}} {{vie}} </tr>
+      <tr> Tags: {{tags}}</tr>
+      <tr> Catégories : {{bookshelves}}</tr>
+      <tr>{{droits}}</tr>
+      <tr>Type : {{type}}</tr>
+      <tr>Nombre de telechargeemnts : {{nbTelechargement}}</tr>
+      <tr><a [routerLink]="['/contenue']">Lire livre</a></tr>
+    </tbody>
+  </table>
+
+</body>
+</html>

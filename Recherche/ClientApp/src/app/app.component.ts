@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-
-
-const sql = require('mssql')
+import { sql } from 'mssql';
 
 
 @Component({
@@ -11,15 +9,47 @@ const sql = require('mssql')
 export class AppComponent {
   title = 'app';
 
-  public test() {
-    async () => {
-      try {
-        await sql.connect('mssql://user:root@localhost:8082/adminer')
-        const result = await sql.query`select * from book`
-        console.dir(result)
-      } catch (err) {
-        // ... error checks
-      }
-    }
+  public livres: any[];
+  public livresId: any[];
+  public url: string = "wordOcc";
+  public details: any;
+  public link: string;
+
+  constructor() {
+
   }
+
+  public setLivres(livres:any[], livresId:any[]) {
+    this.livres = livres;
+    this.livresId = livresId;
+  }
+
+  public getLivres() {
+    return this.livres;
+  }
+
+  public getUrl() {
+    return this.url;
+  }
+
+  public getLivresId() {
+    return this.livresId;
+  }
+
+  public setDetails(detail:string) {
+    this.details = detail;
+  }
+
+  public getDetails() {
+    return this.details;
+  }
+
+  public setContent(link: string) {
+    this.link = link;
+  }
+
+  public getContent(){
+    return this.link; 
+  }
+
 }

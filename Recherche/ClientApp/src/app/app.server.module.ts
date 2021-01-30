@@ -3,9 +3,11 @@ import { ServerModule } from '@angular/platform-server';
 import { ModuleMapLoaderModule } from '@nguniversal/module-map-ngfactory-loader';
 import { AppComponent } from './app.component';
 import { AppModule } from './app.module';
+import { HttpClient, HttpClientModule  } from '@angular/common/http';
 
 @NgModule({
-    imports: [AppModule, ServerModule, ModuleMapLoaderModule],
+  imports: [AppModule, HttpClientModule, 
+    ServerModule, ModuleMapLoaderModule],
     bootstrap: [AppComponent]
 })
 export class AppServerModule { }
