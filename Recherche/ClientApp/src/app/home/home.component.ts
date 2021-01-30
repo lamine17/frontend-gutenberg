@@ -32,34 +32,32 @@ export class HomeComponent {
 
   public getBooks(livre: string) {
 
-    var JSONLivres;
+    var JSONLivres = this.app.getjson();
     var tabl = new Array(this.nb_results);
     var tabi = new Array(this.nb_results);
     //Obtenir les dix livres contenant ce mot
     /* requete http
      *
-     * this.http.get<any>(this.url).subscribe(data => {
-      this.data = data.total;
+     * http.get<JSON>(baseUrl + url).subscribe(result => {
+      this.forecasts = result;
+    }, error => console.error(error));
     })*/
 
-    var livres = Array.of(JSONLivres.json());
-
     var i = 0;
-    for (let l in livres) {
-      if (i == this.nb_results)
-        break;
-      tabi[i] = (JSON.parse(l).json()['book']).json()['id'];
-      tabl[i] = (JSON.parse(l).json()['book']).json()['title'];
+    while (i < this.nb_results) {
+      var l = JSONLivres["" + i];
+      tabi[i] = (l['book'])['id'];
+      tabl[i] = (l['book'])['title'];
       i = i + 1;
     }
     this.tabl = tabl;
     this.tabi = tabi;
   }
-
   //lance la page livre avec les dix premiers livre trouvé
   public rechercher(book: any) {
     this.getBooks(book.value);
-    this.app.setLivres(this.tabl, this.tabl);
+    this.app.setLivres(this.tabl, this.tabi);
+    this.router.navigateByUrl('/counter');
   }
 
 }
