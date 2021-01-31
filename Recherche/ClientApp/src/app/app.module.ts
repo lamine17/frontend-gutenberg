@@ -11,6 +11,9 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
+import { CookieService } from 'ngx-cookie-service';
+import { HistoriqueComponent } from './historique/historique.component';
+
 
 @NgModule({
   declarations: [
@@ -20,6 +23,7 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
     LivreComponent,
     ContenueComponent,
     CounterComponent,
+    HistoriqueComponent,
     FetchDataComponent
   ],
   imports: [
@@ -27,6 +31,7 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot([
+      { path: 'historique', component: HistoriqueComponent },
       { path: 'contenue', component: ContenueComponent},
       { path: 'livre', component: LivreComponent },
       { path: '', component: HomeComponent, pathMatch: 'full' },
@@ -34,7 +39,7 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
       { path: 'fetch-data', component: FetchDataComponent },
     ])
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

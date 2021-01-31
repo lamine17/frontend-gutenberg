@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+  <table>
+    <div [style.display]="isVisible[0] ? 'block' : 'none'">
+      <tr><button (click)="livre(0)">{{histoir[0]}}</button></tr>
+    </div>
+    <div [style.display]="isVisible[1] ? 'block' : 'none'">
+      <tr><button (click)="livre(1)">{{histoir[1]}}</button></tr>
+    </div>
+    <div [style.display]="isVisible[2] ? 'block' : 'none'">
+      <tr><button (click)="livre(2)">{{histoir[2]}}</button></tr>
+    </div>
+    <div [style.display]="isVisible[3] ? 'block' : 'none'">
+      <tr><button (click)="livre(3)">{{histoir[3]}}</button></tr>
+    </div>
+    <div [style.display]="isVisible[4] ? 'block' : 'none'">
+      <tr><button (click)="livre(4)">{{histoir[4]}}</button></tr>
+    </div>
+    <div [style.display]="isVisible[5] ? 'block' : 'none'">
+      <tr><button (click)="livre(5)">{{histoir[5]}}</button></tr>
+    </div>
+    <div [style.display]="isVisible[6] ? 'block' : 'none'">
+      <tr><button (click)="livre(6)">{{histoir[6]}}</button></tr>
+    </div>
+    <div [style.display]="isVisible[7] ? 'block' : 'none'">
+      <tr><button (click)="livre(7)">{{histoir[7]}}</button></tr>
+    </div>
+    <div [style.display]="isVisible[8] ? 'block' : 'none'">
+      <tr><button (click)="livre(8)">{{histoir[8]}}</button></tr>
+    </div>
+    <div [style.display]="isVisible[9] ? 'block' : 'none'"><tr><button (click)="livre(9)">{{histoir[9]}}</button></tr></div>
+</table>
+  <div [style.display]="isVisible[0] ? 'none' : 'block'"><p>{{histoire}}</p></div>
+  <div [style.display]="isVisible[0] ? 'block' : 'none'" ><button (click)="effacer()">Effacer historique</button></div>
+</body>
+</html>

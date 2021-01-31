@@ -1,6 +1,8 @@
 import { Component, Inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { AppComponent } from '../app.component';
+import { CookieService } from 'ngx-cookie-service';
+
 
 @Component({
   selector: 'app-counter-component',
@@ -11,17 +13,21 @@ export class CounterComponent {
   public app: AppComponent;
   public livres: any[];
   public livresId: any[];
+  public cookieID: string;
   public url: string;
   public baseUrl: string;
+  public cookieService: CookieService;
   public router: Router;
 
   public BookContent: string[] = new Array(30);
   public isVisible: boolean[] = new Array(30);
 
 
-  constructor(app: AppComponent, router: Router, @Inject('BASE_URL') baseUrl: string) {
+  constructor(app: AppComponent, router: Router, @Inject('BASE_URL') baseUrl: string, cookieService: CookieService) {
     this.app = app;
-    this.url = this.app.getUrl();
+    this.url = this.app.getUrlR();
+    this.cookieID = this.app.getCookies();
+    this.cookieService = cookieService;
     this.baseUrl = baseUrl;
     this.getLivre();
     this.router = router;
@@ -42,10 +48,13 @@ export class CounterComponent {
 
   public livre(n: number) {
     var id = this.livresId[n];
-    var details = this.app.getTestDetail();
-    /*  envoyer requete selon id pour recevoir detail
-     * */
-    this.app.setDetails(details);
+    this.app.setDetailID(id);
+    if (this.cookieService.check(this.cookieID)) {
+      this.cookieService.set(this.cookieID, this.livres[n] + "****" + this.livresId[n] + ";;;" + this.cookieService.get(this.cookieID));
+    }
+    else {
+      this.cookieService.set(this.cookieID, this.livres[n]);
+    }
     this.router.navigateByUrl("livre");
   }
 

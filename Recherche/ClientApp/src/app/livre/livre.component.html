@@ -12,14 +12,41 @@
     </thead>
     <tbody>
       <tr>Auteur : {{nom}} {{prenom}} {{vie}} </tr>
-      <tr> Tags: {{tags}}</tr>
+      <tr>
+        Tags:
+        <div [style.display]="isVisible[0] ? 'block' : 'none'">{{tags[0]}}</div>
+        <div [style.display]="isVisible[1] ? 'block' : 'none'">{{tags[1]}}</div>
+        <div [style.display]="isVisible[2] ? 'block' : 'none'">{{tags[2]}}</div>
+        <div [style.display]="isVisible[3] ? 'block' : 'none'">{{tags[3]}}</div>
+        <div [style.display]="isVisible[4] ? 'block' : 'none'">{{tags[4]}}</div>
+        <div [style.display]="isVisible[5] ? 'block' : 'none'">{{tags[5]}}</div>
+        <div [style.display]="isVisible[6] ? 'block' : 'none'">{{tags[6]}}</div>
+        <div [style.display]="isVisible[7] ? 'block' : 'none'">{{tags[7]}}</div>
+        <div [style.display]="isVisible[8] ? 'block' : 'none'">{{tags[8]}}</div>
+        <div [style.display]="isVisible[9] ? 'block' : 'none'">{{tags[9]}}</div>
+      </tr>
       <tr> Catégories : {{bookshelves}}</tr>
       <tr>{{droits}}</tr>
       <tr>Type : {{type}}</tr>
-      <tr>Nombre de telechargeemnts : {{nbTelechargement}}</tr>
+      <tr>Nombre de telechargements : {{nbTelechargement}}</tr>
       <tr><button (click)="read()">Lire livre</button></tr>
     </tbody>
   </table>
+  <table>
+    <thead><div [style.display]="hasSuggestion ? 'block' : 'none'"><button (click)="suggestions()">{{toSuggest}}</button></div></thead>
+    <tbody>
+      <div [style.display]="isVisibleS[0] ? 'block' : 'none'"><button (click)="suggestion(0)">{{sugg[0]}}</button></div>
+      <div [style.display]="isVisibleS[1] ? 'block' : 'none'"><button (click)="suggestion(1)">{{sugg[1]}}</button></div>
+      <div [style.display]="isVisibleS[2] ? 'block' : 'none'"><button (click)="suggestion(2)">{{sugg[2]}}</button></div>
+      <div [style.display]="isVisibleS[3] ? 'block' : 'none'"><button (click)="suggestion(3)">{{sugg[3]}}</button></div>
+      <div [style.display]="isVisibleS[4] ? 'block' : 'none'"><button (click)="suggestion(4)">{{sugg[4]}}</button></div>
+      <div [style.display]="isVisibleS[5] ? 'block' : 'none'"><button (click)="suggestion(5)">{{sugg[5]}}</button></div>
+      <div [style.display]="isVisibleS[6] ? 'block' : 'none'"><button (click)="suggestion(6)">{{sugg[6]}}</button></div>
+      <div [style.display]="isVisibleS[7] ? 'block' : 'none'"><button (click)="suggestion(7)">{{sugg[7]}}</button></div>
+      <div [style.display]="isVisibleS[8] ? 'block' : 'none'"><button (click)="suggestion(8)">{{sugg[8]}}</button></div>
+      <div [style.display]="isVisibleS[9] ? 'block' : 'none'"><button (click)="suggestion(9)">{{sugg[9]}}</button></div>
 
+    </tbody>
+  </table>
 </body>
 </html>
