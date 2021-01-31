@@ -92,19 +92,51 @@ export class AppComponent {
 
   public getRecherche(livre: string) {
     //A remplir requete au controller !!!!!!
-    var js = this.json;
+    var data, r;
+    const promise = new Promise((resolve, reject) => {
+      const url = this.baseUrl + this.urlR;
+      this.http
+        .get<any[]>(url)
+        .toPromise()
+        .then((res: any) => {
+          data = res.map((res: any) => {
+            return JSON.stringify('{"query": "'+livre+'","isRegex": true');
+          });
+          resolve();
+          r = res;
+        },
+          err => {
+            reject(err);
+          }
+        );
+    });
     //A remplir requete au controller !!!!!!
-    return js;
+    return r;
 
   }
 
   public getDID(id: string) {
-    //A remplir requete au controller !!!!!! ENVOYER {'id' : <id>} sur le serveur, avec <id> le parametre de la fonction, recuperer le resultat dans js
-    //var params = new HttpParams().set("id", id);
-    //var livre = this.http.get(this.baseUrl + this.urlB, { params });
-    var js = JSON.parse(this.d);
     //A remplir requete au controller !!!!!!
-    return js;
+    var data, r;
+    const promise = new Promise((resolve, reject) => {
+      const url = this.baseUrl + this.urlB;
+      this.http
+        .get<any[]>(url)
+        .toPromise()
+        .then((res: any) => {
+          data = res.map((res: any) => {
+            return JSON.stringify('{"id":  '+id+' }');
+          });
+          resolve();
+          r = res;
+        },
+          err => {
+            reject(err);
+          }
+        );
+    });
+    //A remplir requete au controller !!!!!!
+    return r;
   }
 
   public setSugg(sugg: JSON) {
