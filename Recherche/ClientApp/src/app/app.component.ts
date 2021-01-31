@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { HttpClient, HttpParams } from '@angular/common/http';
+import { Component, Inject } from '@angular/core';
 import { sql } from 'mssql';
 
 
@@ -17,6 +18,7 @@ export class AppComponent {
   public sugg: JSON = JSON.parse('[]');
   public link: string;
   public nb_results = 10;
+  public baseUrl;
 
   public json: JSON;
   public cookieID: string = 'livreGutenbergSU';
@@ -44,8 +46,9 @@ export class AppComponent {
           "Young women -- Fiction" ],       "bookShelves": [ "Best Books Ever Listings", "Harvard Classics" ], "copyright": false, "mediaType": "Text","donwloadLink": "https://www.gutenberg.org/files/1342/1342-0.txt","downloadCount": 57065},"words": [{"str": "with","occurrences": 1024}, {"str": "without","occurrences": 86 }], "accuracy": 0.64},\
                   {      "hash": "kkksqslmjfn#",       "book": {        "id": 1342,       "title": "Pride and Prejudice",       "authors": [          {            "last_name": "Austen",           "first_name": "Jane",           "authorBirth": "1775",           "authorDeath": "1817"          }        ],        "subjects": [         "Courtship -- Fiction",          "Domestic fiction",         "England -- Fiction",          "Love stories",       "Sisters -- Fiction",          "Social classes -- Fiction",\
           "Young women -- Fiction" ],       "bookShelves": [ "Best Books Ever Listings", "Harvard Classics" ], "copyright": false, "mediaType": "Text","donwloadLink": "https://www.gutenberg.org/files/1342/1342-0.txt","downloadCount": 57065},"words": [{"str": "with","occurrences": 1024}, {"str": "without","occurrences": 86 }], "accuracy": 0.64}],"suggestions": [11, 1080,1342 ]}';
-  constructor() {
+  constructor(private http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
     this.json = JSON.parse(this.testS);
+    this.baseUrl = baseUrl;
   }
 
   //Cette fonction s'occupe de rechercher un terme sur la base de donnée, elle retourne ensuite un json
@@ -80,6 +83,8 @@ export class AppComponent {
   //fonction etablissant les details d un livre a partir de son id
   public setDetailID(id: string) {
     //A remplir requete au controller !!!!!!
+    var params = new HttpParams().set("id", id);
+    var livre = this.http.get(this.baseUrl+this.urlB, { params });
     var js = JSON.parse(this.d);
     //A remplir requete au controller !!!!!!
     this.setDetails(js);
