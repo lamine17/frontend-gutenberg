@@ -37,7 +37,7 @@ export class LivreComponent {
     this.vie = detail['authors']["0"]['authorBirth'] + '-' + detail['authors']["0"]['authorDeath'];
     this.bookshelves = detail['subjects'];
     this.droits = detail['copyright'];
-    this.type = detail['subjects'];
+    this.type = detail['mediaType'];
     this.nbTelechargements = detail['downloadCount'];
     this.linkContent = detail['donwloadLink'];
   }
