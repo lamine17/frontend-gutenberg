@@ -1,7 +1,7 @@
 <h1>Gutenberg</h1>
 
 <table>
-  <tr><div [style.display]='isVisible[0] ? "block" : "none"'><button (click)="livre(0)">{{BookContent[[0]]}}</button></div></tr>
+  <tr><div [style.display]='isVisible[0] ? "block" : "none"'><button (click)="livre(0)">{{BookContent[0]}}</button></div></tr>
   <tr> <div [style.display]='isVisible[1] ? "block" : "none"'><button  (click)="livre(1)">{{BookContent[1]}}</button></div></tr>
   <tr>
     <div [style.display]='isVisible[2] ? "block" : "none"'><button  (click)="livre(2)">{{BookContent[2]}}</button></div>
@@ -87,4 +87,6 @@
   <tr>
     <div [style.display]='isVisible[29] ? "block" : "none"'><button  (click)="livre(29)">{{BookContent[29]}}</button></div>
   </tr>
+  <tr><div [style.display]="hasPagesP ? 'block' : 'none'"><button (click)="prec()">Page Precedente</button></div><div [style.display]="hasPages ? 'block' : 'none'"><button (click)="suiv()">Page Suivante</button></div></tr>
+
 </table>

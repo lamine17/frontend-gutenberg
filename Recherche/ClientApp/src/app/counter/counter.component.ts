@@ -21,6 +21,10 @@ export class CounterComponent {
 
   public BookContent: string[] = new Array(30);
   public isVisible: boolean[] = new Array(30);
+  public count: number = 0;
+  public nb_results: number = 10;
+  public hasPages: boolean = false;
+  public hasPagesP: boolean = false;
 
 
   constructor(app: AppComponent, router: Router, @Inject('BASE_URL') baseUrl: string, cookieService: CookieService) {
@@ -33,15 +37,23 @@ export class CounterComponent {
     this.router = router;
     this.getLivresId();
     var i = 0;
+
     this.isVisible[0] = false;
-    for (let l in this.livres) {
-      this.BookContent[i] = this.livres[l];
+    while (i < this.nb_results && i < this.livres.length) {
+      this.BookContent[i] = this.livres[i];
       this.isVisible[i] = true;
       i = i + 1;
     }
     while (i < 30) {
       this.isVisible[i] = false;
       i = i + 1;
+    }
+
+    if (this.livres.length >= this.count + 10) {
+      this.hasPages = true;
+    }
+    if (this.count > 0) {
+      this.hasPagesP = true;
     }
 
   }
@@ -60,6 +72,56 @@ export class CounterComponent {
 
   public getLivre() {
     this.livres = this.app.getLivres();
+  }
+
+  public suiv() {
+    this.hasPages = false;
+    this.hasPagesP = false;
+    this.count = this.count + 10;
+    var i = this.count;
+    var j = 0;
+
+    while (j < this.nb_results && i < this.livres.length) {
+      this.BookContent[j] = this.livres[i];
+      this.isVisible[j] = true;
+      i = i + 1;
+      j = j + 1;
+    }
+    while (j < 30) {
+      this.isVisible[j] = false;
+      j = j + 1;
+    }
+    if (this.livres.length >= this.count + 10) {
+      this.hasPages = true;
+    }
+    if (this.count > 0) {
+      this.hasPagesP = true;
+    }
+  }
+
+  public prec() {
+    this.hasPages = false;
+    this.hasPagesP = false;
+    this.count = this.count - 10;
+    var i = this.count;
+    var j = 0;
+
+    while (j < this.nb_results && i < this.livres.length) {
+      this.BookContent[j] = this.livres[i];
+      this.isVisible[j] = true;
+      i = i + 1;
+      j = j + 1;
+    }
+    while (j < 30) {
+      this.isVisible[j] = false;
+      j = j + 1;
+    }
+    if (this.livres.length >= this.count + 10) {
+      this.hasPages = true;
+    }
+    if (this.count > 0) {
+      this.hasPagesP = true;
+    }
   }
 
   public getLivresId() {

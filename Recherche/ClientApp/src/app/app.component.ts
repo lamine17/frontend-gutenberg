@@ -30,6 +30,16 @@ export class AppComponent {
           "Young women -- Fiction" ],       "bookShelves": [ "Best Books Ever Listings", "Harvard Classics" ], "copyright": false, "mediaType": "Text","donwloadLink": "https://www.gutenberg.org/files/1342/1342-0.txt","downloadCount": 57065},"words": [{"str": "with","occurrences": 1024}, {"str": "without","occurrences": 86 }], "accuracy": 0.64}, \
                    {      "hash": "kkksqslmjfn#",       "book": {        "id": 1342,       "title": "Pride and Prejudice",       "authors": [          {            "last_name": "Austen",           "first_name": "Jane",           "authorBirth": "1775",           "authorDeath": "1817"          }        ],        "subjects": [         "Courtship -- Fiction",          "Domestic fiction",         "England -- Fiction",          "Love stories",       "Sisters -- Fiction",          "Social classes -- Fiction",\
           "Young women -- Fiction" ],       "bookShelves": [ "Best Books Ever Listings", "Harvard Classics" ], "copyright": false, "mediaType": "Text","donwloadLink": "https://www.gutenberg.org/files/1342/1342-0.txt","downloadCount": 57065},"words": [{"str": "with","occurrences": 1024}, {"str": "without","occurrences": 86 }], "accuracy": 0.64},\
+                   {      "hash": "kkksqslmjfn#",       "book": {        "id": 1342,       "title": "Pride and Prejudice",       "authors": [          {            "last_name": "Austen",           "first_name": "Jane",           "authorBirth": "1775",           "authorDeath": "1817"          }        ],        "subjects": [         "Courtship -- Fiction",          "Domestic fiction",         "England -- Fiction",          "Love stories",       "Sisters -- Fiction",          "Social classes -- Fiction",\
+          "Young women -- Fiction" ],       "bookShelves": [ "Best Books Ever Listings", "Harvard Classics" ], "copyright": false, "mediaType": "Text","donwloadLink": "https://www.gutenberg.org/files/1342/1342-0.txt","downloadCount": 57065},"words": [{"str": "with","occurrences": 1024}, {"str": "without","occurrences": 86 }], "accuracy": 0.64},\
+                   {      "hash": "kkksqslmjfn#",       "book": {        "id": 1342,       "title": "Pride and Prejudice",       "authors": [          {            "last_name": "Austen",           "first_name": "Jane",           "authorBirth": "1775",           "authorDeath": "1817"          }        ],        "subjects": [         "Courtship -- Fiction",          "Domestic fiction",         "England -- Fiction",          "Love stories",       "Sisters -- Fiction",          "Social classes -- Fiction",\
+          "Young women -- Fiction" ],       "bookShelves": [ "Best Books Ever Listings", "Harvard Classics" ], "copyright": false, "mediaType": "Text","donwloadLink": "https://www.gutenberg.org/files/1342/1342-0.txt","downloadCount": 57065},"words": [{"str": "with","occurrences": 1024}, {"str": "without","occurrences": 86 }], "accuracy": 0.64},\
+                   {      "hash": "kkksqslmjfn#",       "book": {        "id": 1342,       "title": "Pride and Prejudice",       "authors": [          {            "last_name": "Austen",           "first_name": "Jane",           "authorBirth": "1775",           "authorDeath": "1817"          }        ],        "subjects": [         "Courtship -- Fiction",          "Domestic fiction",         "England -- Fiction",          "Love stories",       "Sisters -- Fiction",          "Social classes -- Fiction",\
+          "Young women -- Fiction" ],       "bookShelves": [ "Best Books Ever Listings", "Harvard Classics" ], "copyright": false, "mediaType": "Text","donwloadLink": "https://www.gutenberg.org/files/1342/1342-0.txt","downloadCount": 57065},"words": [{"str": "with","occurrences": 1024}, {"str": "without","occurrences": 86 }], "accuracy": 0.64},\
+                   {      "hash": "kkksqslmjfn#",       "book": {        "id": 1342,       "title": "Pride and Prejudice",       "authors": [          {            "last_name": "Austen",           "first_name": "Jane",           "authorBirth": "1775",           "authorDeath": "1817"          }        ],        "subjects": [         "Courtship -- Fiction",          "Domestic fiction",         "England -- Fiction",          "Love stories",       "Sisters -- Fiction",          "Social classes -- Fiction",\
+          "Young women -- Fiction" ],       "bookShelves": [ "Best Books Ever Listings", "Harvard Classics" ], "copyright": false, "mediaType": "Text","donwloadLink": "https://www.gutenberg.org/files/1342/1342-0.txt","downloadCount": 57065},"words": [{"str": "with","occurrences": 1024}, {"str": "without","occurrences": 86 }], "accuracy": 0.64},\
+                   {      "hash": "kkksqslmjfn#",       "book": {        "id": 1342,       "title": "Pride and Prejudice",       "authors": [          {            "last_name": "Austen",           "first_name": "Jane",           "authorBirth": "1775",           "authorDeath": "1817"          }        ],        "subjects": [         "Courtship -- Fiction",          "Domestic fiction",         "England -- Fiction",          "Love stories",       "Sisters -- Fiction",          "Social classes -- Fiction",\
+          "Young women -- Fiction" ],       "bookShelves": [ "Best Books Ever Listings", "Harvard Classics" ], "copyright": false, "mediaType": "Text","donwloadLink": "https://www.gutenberg.org/files/1342/1342-0.txt","downloadCount": 57065},"words": [{"str": "with","occurrences": 1024}, {"str": "without","occurrences": 86 }], "accuracy": 0.64},\
                {      "hash": "kkksqslmjfn#",       "book": {        "id": 1342,       "title": "Pride and Prejudice",       "authors": [          {            "last_name": "Austen",           "first_name": "Jane",           "authorBirth": "1775",           "authorDeath": "1817"          }        ],        "subjects": [         "Courtship -- Fiction",          "Domestic fiction",         "England -- Fiction",          "Love stories",       "Sisters -- Fiction",          "Social classes -- Fiction",\
           "Young women -- Fiction" ],       "bookShelves": [ "Best Books Ever Listings", "Harvard Classics" ], "copyright": false, "mediaType": "Text","donwloadLink": "https://www.gutenberg.org/files/1342/1342-0.txt","downloadCount": 57065},"words": [{"str": "with","occurrences": 1024}, {"str": "without","occurrences": 86 }], "accuracy": 0.64},\
                  {      "hash": "kkksqslmjfn#",       "book": {        "id": 1342,       "title": "Pride and Prejudice",       "authors": [          {            "last_name": "Austen",           "first_name": "Jane",           "authorBirth": "1775",           "authorDeath": "1817"          }        ],        "subjects": [         "Courtship -- Fiction",          "Domestic fiction",         "England -- Fiction",          "Love stories",       "Sisters -- Fiction",          "Social classes -- Fiction",\
@@ -53,15 +63,14 @@ export class AppComponent {
 
   //Cette fonction s'occupe de rechercher un terme sur la base de donnée, elle retourne ensuite un json
   public recherche(rec: string) {
-    //A remplir requete au controller !!!!!!
-    var js = this.json;
-    //A remplir requete au controller !!!!!!
+    var js = this.getRecherche(rec);
     var JSONLivres = js["searchResponses"];
     this.setSugg(js["suggestions"]);
     var i = 0;
-    var tabi = new Array(this.nb_results);
-    var tabl = new Array(this.nb_results);
-    while (i < this.nb_results) {
+    var t = Object.keys(JSONLivres).length;
+    var tabi = new Array(t);
+    var tabl = new Array(t);
+    while (i < t) {
       var l = JSONLivres["" + i];
       tabi[i] = (l['book'])['id'];
       tabl[i] = (l['book'])['title'];
@@ -72,22 +81,30 @@ export class AppComponent {
     this.livresId = tabi;
   }
 
-  //Cette fonction retourne le titre d'un livre a partir de son id
   public getTitreID(id) {
-    //A remplir requete au controller !!!!!!
-    var js = JSON.parse(this.d);
-    //A remplir requete au controller !!!!!!
+    var js = this.getDID(id);
     return js["title"];
   }
 
-  //fonction etablissant les details d un livre a partir de son id
   public setDetailID(id: string) {
+    this.setDetails(this.getDID(id));
+  }
+
+  public getRecherche(livre: string) {
     //A remplir requete au controller !!!!!!
-    var params = new HttpParams().set("id", id);
-    var livre = this.http.get(this.baseUrl+this.urlB, { params });
+    var js = this.json;
+    //A remplir requete au controller !!!!!!
+    return js;
+
+  }
+
+  public getDID(id: string) {
+    //A remplir requete au controller !!!!!! ENVOYER {'id' : <id>} sur le serveur, avec <id> le parametre de la fonction, recuperer le resultat dans js
+    //var params = new HttpParams().set("id", id);
+    //var livre = this.http.get(this.baseUrl + this.urlB, { params });
     var js = JSON.parse(this.d);
     //A remplir requete au controller !!!!!!
-    this.setDetails(js);
+    return js;
   }
 
   public setSugg(sugg: JSON) {
