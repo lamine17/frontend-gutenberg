@@ -17,6 +17,9 @@ export class AppComponent {
 
   public json: JSON;
 
+  public d: string = '{"id": 1342, "title": "Pride and Prejudice","authors": [ {"last_name": "Austen", "first_name": "Jane","authorBirth": "1775", "authorDeath": "1817" }],"subjects": ["Courtship -- Fiction","Domestic fiction", "England -- Fiction", "Love stories", "Sisters -- Fiction", "Social classes -- Fiction", "Young women -- Fiction"],\
+  "bookShelves": [ "Best Books Ever Listings", "Harvard Classics" ], "copyright": false, "mediaType": "Text", "donwloadLink": "https://www.gutenberg.org/files/1342/1342-0.txt", "downloadCount": 57065}'
+
   public testS: string = '[{ "hash": "kkksqslmjfn#", "book": {"id": 1342,"title": "Pride and Prejudice","authors": [{"last_name": "Austen", "first_name": "Jane", "authorBirth": "1775","authorDeath": "1817"}\
         ],"subjects": [ "Courtship -- Fiction","Domestic fiction", "England -- Fiction","Love stories","Sisters -- Fiction","Social classes -- Fiction","Young women -- Fiction"],\
             "bookShelves": [ "Best Books Ever Listings","Harvard Classics"], "copyright": false,"mediaType": "Text","donwloadLink": "https://www.gutenberg.org/files/1342/1342-0.txt","downloadCount": 57065}, "words": [{"str": "with","occurrences": 1024 },{"str": "without","occurrences": 86}], "accuracy": 0.64},\
@@ -60,6 +63,10 @@ export class AppComponent {
 
   public getjson() {
     return this.json;
+  }
+
+  public getTestDetail() {
+    return JSON.parse(this.d);
   }
 
   public setLivres(livres:any[], livresId:any[]) {

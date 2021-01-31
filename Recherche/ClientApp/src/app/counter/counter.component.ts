@@ -1,4 +1,5 @@
 import { Component, Inject } from '@angular/core';
+import { Router } from '@angular/router';
 import { AppComponent } from '../app.component';
 
 @Component({
@@ -12,21 +13,23 @@ export class CounterComponent {
   public livresId: any[];
   public url: string;
   public baseUrl: string;
+  public router: Router;
 
   public BookContent: string[] = new Array(30);
   public isVisible: boolean[] = new Array(30);
 
 
-  constructor(app: AppComponent, @Inject('BASE_URL') baseUrl: string) {
+  constructor(app: AppComponent, router: Router, @Inject('BASE_URL') baseUrl: string) {
     this.app = app;
     this.url = this.app.getUrl();
     this.baseUrl = baseUrl;
     this.getLivre();
+    this.router = router;
     this.getLivresId();
     var i = 0;
     this.isVisible[0] = false;
     for (let l in this.livres) {
-      this.BookContent[i] = l;
+      this.BookContent[i] = this.livres[l];
       this.isVisible[i] = true;
       i = i + 1;
     }
@@ -39,10 +42,11 @@ export class CounterComponent {
 
   public livre(n: number) {
     var id = this.livresId[n];
-    var details;
+    var details = this.app.getTestDetail();
     /*  envoyer requete selon id pour recevoir detail
      * */
     this.app.setDetails(details);
+    this.router.navigateByUrl("livre");
   }
 
   public getLivre() {

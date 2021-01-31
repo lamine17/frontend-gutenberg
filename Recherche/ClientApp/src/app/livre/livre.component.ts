@@ -1,4 +1,5 @@
 import { Component, Inject } from '@angular/core';
+import { Router } from '@angular/router';
 import { AppComponent } from '../app.component';
 
 
@@ -18,25 +19,31 @@ export class LivreComponent {
   public type: string;
   public nbTelechargements: string;
   public linkContent: string;
+  public router: Router;
 
-  constructor(app: AppComponent) {
+  constructor(app: AppComponent, router: Router) {
     this.app = app;
     this.manageContent();
     this.app.setContent(this.linkContent);
+    this.router = router;
   }
 
   public manageContent() {
     var detail = this.app.getDetails();
-    this.titre = detail.json()['title'];
-    this.nom = detail.json()['authors'][0]['last_name'];
-    this.prenom = detail.json()['authors'][0]['first_name'];
-    this.vie = detail.json()['authors'][0]['authorBirth'] + '-' + detail.json()['authors'][0]['authorDeath'];
-    this.bookshelves = detail.json()['subjects'];
-    this.droits = detail.json()['copyright'];
-    this.type = detail.json()['subjects'];
-    this.nbTelechargements = detail.json()['downloadCount'];
-    this.linkContent = detail.json()['donwloadLink'];
+    console.log(detail);
+    this.titre = detail['title'];
+    this.nom = detail['authors']["0"]['last_name'];
+    this.prenom = detail['authors']["0"]['first_name'];
+    this.vie = detail['authors']["0"]['authorBirth'] + '-' + detail['authors']["0"]['authorDeath'];
+    this.bookshelves = detail['subjects'];
+    this.droits = detail['copyright'];
+    this.type = detail['subjects'];
+    this.nbTelechargements = detail['downloadCount'];
+    this.linkContent = detail['donwloadLink'];
   }
 
+  public read() {
+    this.router.navigateByUrl(this.linkContent);
+  }
 
 }
